@@ -1,0 +1,27 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int t,i,j,n;
+	s1(t);
+	while(t--){
+		s1(n);
+		map<ll,vector<ll> > mp;
+		For1(i,0,n){
+			s1(j);
+			mp[j].pb(i+1);
+		}
+		int q;
+		s1(q);
+		while(q--){
+			int x;
+			s1(x);
+			if(mp[x].size()==0){
+				pf(-1)<<"\n";
+			}else{
+				pf(mp[x][mp[x].size()-1])<<"\n";
+			}
+			//cout<<nl;
+		}
+	}
+	return 0;
+}
