@@ -1,0 +1,22 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int n,x,i;
+	s1(n);
+	VLL arr(1001,0);
+	For1e1(i,1,n){
+		s1(x);
+		arr[x]++;
+	}
+	int q;
+	s1(q);
+	while(q--){
+		s1(x);
+		if(arr[x]){
+			pf(arr[x])<<"\n";
+		}else{
+			pfs("NOT PRESENT\n");
+		}
+	}
+	return 0;
+}
