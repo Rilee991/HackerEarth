@@ -1,0 +1,21 @@
+int main(){
+	int t,i,j;
+	s1(t);
+	while(t--){
+		int n,k;
+		s2(n,k);
+		VLL arr(n);
+		ll mn = INT_MAX;
+		For1(i,0,n){
+			cin>>arr[i];
+			if(arr[i]<mn)
+				mn = arr[i];
+		}
+		ll ans = 0;
+		if(mn<k){
+			ans = k-mn;
+		}
+		pf(ans)<<nl;
+	}
+	return 0;
+}
