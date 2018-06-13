@@ -1,0 +1,29 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int n,i,q;
+	s2(n,q);
+	VLL arr(n);
+	arr = inpA(n);
+	//pfArr(arr);
+	while(q--){
+		int k;
+		s1(k);
+		//pf(l);
+		if(k==1){
+			int x;
+			s1(x);
+			arr[x-1] = 1 - arr[x-1];
+		}else{
+			int a,b;
+			s2(a,b);
+			//pf(a)<<b;
+			if(arr[b-1]){
+				pfs("ODD\n");
+			}else{
+				pfs("EVEN\n");
+			}
+		}
+	}
+	return 0;
+}
