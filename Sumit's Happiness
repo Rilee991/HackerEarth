@@ -1,0 +1,51 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	int t;
+	s1(t);
+	while(t--){
+		int n;
+		bool flag = 0;
+		ll sum = 0;
+		s1(n);
+		VLL arr(n);
+		int i;
+		For1(i,0,n){
+			cin>>arr[i];
+			if(arr[i]<=0)
+				sum += arr[i];
+			else
+				flag = 1;
+		}
+		if(flag){
+			SortV(arr);
+			ll s = 0,flag = 0;
+			int k = 0;
+			For1e1r(i,n-1,0){
+				if(arr[i]>0){
+					s += arr[i];
+					k++;
+				}else{
+					flag = 1;
+					break;
+				}
+			}
+			ll ans = s*k+sum;
+			int j;
+			if(flag){
+				For1e1r(j,i,0){
+					k++;
+					s += arr[j];
+					ll t1 = s*k;
+					sum -= arr[j];
+					ll t2 = t1+sum;
+					ans = max(ans,t2);
+				}
+			}
+			pf(ans)<<"\n";
+		}else{
+			pf(sum)<<"\n";
+		}
+	}
+	return 0;
+}
