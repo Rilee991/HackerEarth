@@ -1,0 +1,24 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int n,i;
+	s1(n);
+	MLLLL mp;
+	For1(i,0,n){
+		int x;
+		s1(x);
+		mp[x]++;
+	}
+	MLLLL::iterator it;
+	ll num = INT_MAX;
+	ll curr = INT_MIN;
+	ForMap(it,mp){
+		if(it->S>curr){
+			curr = it->S;
+			num = it->F;
+		}
+	}
+	pf(num);
+	return 0;
+}
