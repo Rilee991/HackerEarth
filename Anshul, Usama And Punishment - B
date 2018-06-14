@@ -1,0 +1,28 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int i;
+	VLL vals(63);
+	vals[1] = 20;
+	vals[2] = 30;
+	For1(i,3,63){
+		if(i & 1){
+			vals[i] = vals[i-2]*2;
+		}else{
+			vals[i] = vals[i-2]*3;
+		}
+	}
+	//pfArr(vals);
+	int n;
+	s1(n);
+	ll mx;
+	For1r(i,n,0){
+		if(vals[i]>vals[i-1]){
+			mx = vals[i];
+			break;
+		}
+	}
+	pf(abs(mx-20)+abs(mx+20));
+	return 0;
+}
