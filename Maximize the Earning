@@ -1,0 +1,23 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int s;
+	s1(s);
+	while(s--){
+		int n,r,i;
+		s2(n,r);
+		VLL arr(n);
+		arr = inpA(n);
+		ll cities = 1;
+		ll f = arr[0];
+		For1(i,1,n){
+			if(arr[i]>f){
+				cities++;
+				f = arr[i];
+			}
+		}
+		pf(cities*r)<<"\n";
+	}
+	return 0;
+}
