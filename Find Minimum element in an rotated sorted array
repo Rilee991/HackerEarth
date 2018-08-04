@@ -1,0 +1,24 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int n;
+	s1(n);
+	VLL arr(n);
+	arr = inpA(n);
+	int low = 0, high = n-1;
+	while(low<=high){
+		int mid = (low+high)/2;
+		if(arr[mid]>arr[mid+1]){
+			pf(mid+1);
+			break;
+		}else if(arr[mid]<arr[mid-1]){
+			pf(mid);
+			break;
+		}else if(arr[mid]<arr[n-1]){
+			high = mid-1;
+		}else{
+			low = mid+1;
+		}
+	}
+}
