@@ -1,0 +1,48 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int n,d;
+	s2(n,d);
+	VLL arr(n);
+	arr = inpA(n);
+	//left rotation of array
+	d = d%n;
+	/*
+	//Method - 2
+	int i;
+	For1(i,0,__gcd(n,d)){
+		int temp = arr[i];
+		int j = i;
+		while(true){
+			int k = j + d;
+			k = k%n;
+			if(k==i)
+				break;
+			arr[j] = arr[k];
+			j = k;
+		}
+		arr[j] = temp;
+	}
+	pfArr(arr);*/
+	
+	/* Method - 1
+	VLL ans(n);
+	int i = 0;
+	while(i<n){
+		int index = i-d;
+		if(index<0)
+			index += n;
+		ans[index] = arr[i];
+		i++;
+	}
+	pfArr(ans);*/
+	
+	//Method - 3
+	//BestMethod
+	reverse(arr.begin(),arr.begin()+d-1);
+	reverse(arr.begin()+d,arr.begin()+n-1);
+	reverse(arr.begin(),arr.end());
+	pfArr(arr);
+	return 0;
+}
